@@ -1,0 +1,10 @@
+{
+    "name": "Airports API",
+    "path": "/api/v1/airports",
+    "state": "unpublished",
+    "version": "1.0.0",
+    "organization": "API Development",
+    "apiDefinition": "../app/airports/endpoints/airports-api.json",
+    "image": "airports-image.png"
+  }
+  
