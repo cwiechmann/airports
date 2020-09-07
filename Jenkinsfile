@@ -15,13 +15,14 @@ pipeline {
    stages {
       stage('Build Airports Application') {
          steps {
-            dir('app/airports')
-            sh '''
-               pwd
-               npm ci
-               npm run build --if-present
-               npm test
-            '''
+            dir('app/airports') {
+               sh '''
+                  pwd
+                  npm ci
+                  npm run build --if-present
+                  npm test
+               '''
+            }
          }
       }
       stage('Building image') {
