@@ -6,28 +6,43 @@ pipeline {
       maven "Mvn 3.3.9"
    }
    
-   triggers {
-      pollSCM ''
-   }
+  environment {
+     registry = "gustavoapolinario/docker-test"
+     registryCredential = 'dockerhub'
+     dockerImage = ''
+  }
 
    stages {
-      /*stage('Docker image') {
+      stage('Build Airports Application') {
          steps {
-            echo 'Starting to build docker image'
+            dir('app/airports')
+            sh '''
+               pwd
+               npm ci
+               npm run build --if-present
+               npm test
+            '''
+         }
+      }
+      stage('Building image') {
+         steps{
             script {
-               dockerImage = docker.build("weather-api:${env.BUILD_ID}", "-f api-builder/weather-impl-service/Dockerfile .")
-               //customImage.push()
+               dockerImage = docker.build registry + ":$BUILD_NUMBER"
             }
          }
-      }*/
-
+      }
+      stage('Deploy Image') {
+         steps{
+            script {
+               docker.withRegistry( '', registryCredential ) {
+                  dockerImage.push()
+               }
+            }
+         }
+      }
       stage('Deploy Airports API') {
          steps {
-            // Run Maven on a Unix agent.
             sh "mvn clean exec:java"
-
-            // To run Maven on a Windows agent, use
-            // bat "mvn -Dmaven.test.failure.ignore=true clean package"
          }
       }
    }
