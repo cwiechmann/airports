@@ -10,7 +10,7 @@
     <description>Airports APIs based on a SOAP-Service</description>
 
     <properties>
-        <apiConfigFile>./API/apiconfig.json</apiConfigFile>
+        <apiConfigFile>apiconfig.json</apiConfigFile>
         <stage>api-env</stage>
     </properties>
 
