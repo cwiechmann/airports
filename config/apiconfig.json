@@ -5,6 +5,18 @@
     "version": "1.0.0",
     "organization": "API Development",
     "apiDefinition": "../app/airports/endpoints/airports-api.json",
-    "image": "airports-image.png"
+    "image": "airports-image.png",
+    "backendBasepath": "http://192.168.65.1:8080/api/api/v1/weather",
+    "authenticationProfiles": [
+      {
+        "name": "_default",
+        "isDefault": true,
+        "parameters": {
+          "username": "jeT+Zv5g8gGGNXuYUtagTyvfFLYZ0kzG", 
+          "password": ""
+        },
+        "type": "http_basic"
+      }
+    ]
   }
   
