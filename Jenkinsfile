@@ -7,7 +7,7 @@ pipeline {
    }
    
   environment {
-     registry = "gustavoapolinario/docker-test"
+     registry = "cwiechmann/airports-app"
      registryCredential = 'dockerhub'
      dockerImage = ''
   }
