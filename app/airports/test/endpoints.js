@@ -18,36 +18,22 @@ describe('Endpoints', function () {
 	 */
 	after(() => stopApiBuilder(server));
 
-	describe('Greet', () => {
-		it('[Endpoint-0001] should be able to hit Greet endpoint', () => {
+	describe('Airports API', () => {
+		it('[Airports Endpoint-0001] validate airports response', () => {
+			var jsonResponse = JSON.parse(require('fs').readFileSync('./test/testDocuments/airports.json', 'utf8'));
 			const auth = {
 				user: server.apibuilder.config.apikey || 'test',
 				password: ''
 			};
-			const username = 'Johnny Test';
 			return requestAsync({
 				method: 'GET',
-				uri: `http://localhost:${server.apibuilder.port}/api/greet?username=${username}`,
+				uri: `http://localhost:${server.apibuilder.port}/api/location/78687687/90798789/30`,
 				auth: auth,
 				json: true
 			}).then(({ response, body }) => {
+				debugger;
 				expect(response.statusCode).to.equal(200);
-				expect(body).to.equal(`Howdy ${username}`);
-			});
-		});
-
-		it('[Endpoint-0002] should be able to get error response from Greet endpoint', () => {
-			const auth = {
-				user: server.apibuilder.config.apikey || 'test',
-				password: ''
-			};
-			return requestAsync({
-				method: 'GET',
-				uri: `http://localhost:${server.apibuilder.port}/api/greet`,
-				auth: auth,
-				json: true
-			}).then(({ response }) => {
-				expect(response.statusCode).to.equal(400);
+				expect(body).to.deep.equal(jsonResponse);
 			});
 		});
 	});

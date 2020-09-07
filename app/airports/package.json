@@ -17,7 +17,7 @@
 	"repository": {},
 	"private": true,
 	"dependencies": {
-		"@axway-api-builder-ext/api-builder-plugin-fn-xml-node": "^1.0.5",
+		"@axway-api-builder-ext/api-builder-plugin-fn-xml-node": "^1.0.7",
 		"@axway/api-builder-plugin-fn-base64": "^3.0.0",
 		"@axway/api-builder-plugin-fn-javascript": "^2.0.0",
 		"@axway/api-builder-plugin-fn-json": "^4.0.0",

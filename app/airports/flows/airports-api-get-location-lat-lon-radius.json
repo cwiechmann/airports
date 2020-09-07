@@ -194,15 +194,29 @@
 					"name": "xmlData",
 					"type": "jsonpath",
 					"value": "$.soapResponse.body",
-					"metaName": "XML Data",
-					"metaDescription": "XML data to be converted"
+					"metaName": "XML Input data",
+					"metaDescription": "XML Data. For instance: $.soapResponse.body"
+				},
+				{
+					"name": "selectPath",
+					"type": "string",
+					"value": "\"$['soapenv:Envelope']['soapenv:Body']\"",
+					"metaName": "Select object with path",
+					"metaDescription": "The object within the returned structure with this path is returned. Example: $[\"soap:Envelope\"][\"soap:Body\"]"
+				},
+				{
+					"name": "removeNamespaces",
+					"type": "array",
+					"value": "[\"v1\"]",
+					"metaName": "Remove namespaces",
+					"metaDescription": "An Array of namespaces to be removed from the JSON-Message. Example: [\"v1\"] will convert the following: \"<v1:radius_airportsResponse>\" into \"radius_airportsResponse\": {"
 				}
 			],
 			"outputs": {
 				"next": {
-					"context": "$.jsonData",
+					"context": "$.response",
 					"routes": [
-						"setcontext.1"
+						"http.1"
 					],
 					"metaName": "Next"
 				},
@@ -213,29 +227,6 @@
 				}
 			},
 			"metaMethod": "XML to JSON"
-		},
-		"setcontext.1": {
-			"type": "nodehandler://axway-flow/setcontext",
-			"name": "Set response body",
-			"method": "setcontext",
-			"parameters": [
-				{
-					"name": "value",
-					"type": "jsonpath",
-					"value": "$.jsonData['soapenv:Envelope']['soapenv:Body']",
-					"metaName": "Value"
-				}
-			],
-			"outputs": {
-				"next": {
-					"context": "$.response",
-					"routes": [
-						"http.1"
-					],
-					"metaName": "Next"
-				}
-			},
-			"metaMethod": "Set Context"
 		},
 		"http.1": {
 			"type": "nodehandler://axway-flow/http",
