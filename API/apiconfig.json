@@ -1,0 +1,14 @@
+{
+    "name": "Airports API",
+    "path": "/api/v1/airports",
+    "state": "unpublished",
+    "version": "1.0.0",
+    "organization": "API Development",
+    "apiDefinition": "./airports-api.json",
+    "image": "imagine-api-logo.png",
+    "tags": {
+      "Imagine": ["Axway", "Chantilly"],
+      "API-State": ["Designed"]
+    }
+  }
+  
