@@ -5,6 +5,10 @@ pipeline {
       // Install the Maven version configured as "M3" and add it to the path.
       maven "Mvn 3.3.9"
    }
+   
+   triggers {
+      pollSCM ''
+   }
 
    stages {
       /*stage('Docker image') {
