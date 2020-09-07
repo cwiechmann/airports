@@ -39,7 +39,7 @@ module.exports = {
 	// Configures your http server
 	http: {
 		// This is the port the service will be bound to. Defaults to 8080.
-		port: parseInt(process.env.PORT) || 8080,
+		port: parseInt(process.env.PORT) || 8280,
 
 		// When this is true, the service will no longer listen on requests over http.
 		// Disabling http requires 'ssl' to be configured.
