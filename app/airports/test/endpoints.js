@@ -27,7 +27,7 @@ describe('Endpoints', function () {
 			};
 			return requestAsync({
 				method: 'GET',
-				uri: `http://localhost:${server.apibuilder.port}/api/location/78687687/90798789/30`,
+				uri: `http://localhost:${server.apibuilder.port}/api/airports/location/78687687/90798789/30`,
 				auth: auth,
 				json: true
 			}).then(({ response, body }) => {
