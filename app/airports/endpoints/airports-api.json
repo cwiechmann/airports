@@ -55,5 +55,6 @@
       }
     }
   },
-  "definitions": {}
+  "definitions": {},
+  "basePath": "/airports"
 }
