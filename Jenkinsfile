@@ -27,8 +27,10 @@ pipeline {
       }
       stage('Building image') {
          steps{
-            script {
-               dockerImage = docker.build registry + ":$BUILD_NUMBER"
+            dir('app/airports') {
+               script {
+                  dockerImage = docker.build registry + ":$BUILD_NUMBER"
+               }
             }
          }
       }
