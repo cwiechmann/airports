@@ -1,67 +1,109 @@
 {
-    "name": "Airports API",
-    "path": "/api/v1/airports",
-    "state": "published",
-    "version": "1.0.0",
-    "organization": "API Development",
-    "summary": "Get information about airports, etc.",
-    "apiDefinition": "../app/airports/endpoints/airports-api.json",
-    "image": "airports-image.png",
-    "backendBasepath": "http://192.168.65.1:8080/api/airports",
-    "authenticationProfiles": [
-      {
-        "name": "_default",
-        "isDefault": true,
-        "parameters": {
-          "username": "jeT+Zv5g8gGGNXuYUtagTyvfFLYZ0kzG", 
-          "password": ""
-        },
-        "type": "http_basic"
-      }
-    ], 
-    "tags": {
-      "Category": ["Axway", "Airports"]
-    },
-    "securityProfiles" : [ {
-      "name" : "_default",
-      "isDefault" : true,
-      "devices" : [ {
-        "name" : "OAuth (External)",
-        "type" : "oauthExternal",
-        "order" : 1,
-        "properties" : {
-          "tokenStore" : "Token information policy",
-          "accessTokenLocation" : "HEADER",
-          "authorizationHeaderPrefix" : "Bearer",
-          "accessTokenLocationQueryString" : "",
-          "scopesMustMatch" : "Any",
-          "scopes" : "resource.WRITE, resource.READ",
-          "removeCredentialsOnSuccess" : "true",
-          "implicitGrantEnabled" : "true",
-          "implicitGrantLoginEndpointUrl" : "https://localhost:8089/api/oauth/authorize",
-          "implicitGrantLoginTokenName" : "access_token",
-          "authCodeGrantTypeEnabled" : "true",
-          "authCodeGrantTypeRequestEndpointUrl" : "https://localhost:8089/api/oauth/authorize",
-          "authCodeGrantTypeRequestClientIdName" : "client_id",
-          "authCodeGrantTypeRequestSecretName" : "client_secret",
-          "authCodeGrantTypeTokenEndpointUrl" : "https://localhost:8089/api/oauth/token",
-          "authCodeGrantTypeTokenEndpointTokenName" : "access_code",
-          "useClientRegistry" : "true",
-          "subjectSelector" : "${oauth.token.client_id}",
-          "oauth.token.client_id" : "${oauth.token.client_id}",
-          "oauth.token.scopes" : "${oauth.token.scopes}",
-          "oauth.token.valid" : "${oauth.token.valid}"
+  "name": "Airports API",
+  "path": "/api/v1/airports",
+  "state": "published",
+  "version": "1.0.0",
+  "organization": "API Development",
+  "summary": "Get information about airports, etc.",
+  "apiDefinition": "../app/airports/endpoints/airports-api.json",
+  "image": "airports-image.png",
+  "backendBasepath": "http://192.168.65.1:8080/api/airports",
+  "authenticationProfiles": [
+    {
+      "name": "_default",
+      "isDefault": true,
+      "parameters": {
+        "username": "jeT+Zv5g8gGGNXuYUtagTyvfFLYZ0kzG",
+        "password": ""
+      },
+      "type": "http_basic"
+    }
+  ],
+  "tags": {
+    "Category": ["Axway", "Airports"]
+  },
+  "securityProfiles": [
+    {
+      "name": "_default",
+      "isDefault": true,
+      "devices": [
+        {
+          "name": "OAuth (External)",
+          "type": "oauthExternal",
+          "order": 1,
+          "properties": {
+            "tokenStore": "Token information policy",
+            "accessTokenLocation": "HEADER",
+            "authorizationHeaderPrefix": "Bearer",
+            "accessTokenLocationQueryString": "",
+            "scopesMustMatch": "Any",
+            "scopes": "resource.WRITE, resource.READ",
+            "removeCredentialsOnSuccess": "true",
+            "implicitGrantEnabled": "true",
+            "implicitGrantLoginEndpointUrl": "https://localhost:8089/api/oauth/authorize",
+            "implicitGrantLoginTokenName": "access_token",
+            "authCodeGrantTypeEnabled": "true",
+            "authCodeGrantTypeRequestEndpointUrl": "https://localhost:8089/api/oauth/authorize",
+            "authCodeGrantTypeRequestClientIdName": "client_id",
+            "authCodeGrantTypeRequestSecretName": "client_secret",
+            "authCodeGrantTypeTokenEndpointUrl": "https://localhost:8089/api/oauth/token",
+            "authCodeGrantTypeTokenEndpointTokenName": "access_code",
+            "useClientRegistry": "true",
+            "subjectSelector": "${oauth.token.client_id}",
+            "oauth.token.client_id": "${oauth.token.client_id}",
+            "oauth.token.scopes": "${oauth.token.scopes}",
+            "oauth.token.valid": "${oauth.token.valid}"
+          }
         }
-      } ]
-    } ],
-    "outboundProfiles":{
-      "_default":{
-         "requestPolicy":"Custom request policy", 
-         "responsePolicy":"Custom response policy", 
-         "routePolicy":"Custom routing policy"
+      ]
+    }
+  ],
+  "outboundProfiles": {
+    "_default": {
+      "requestPolicy": "Custom request policy",
+      "responsePolicy": "Custom response policy",
+      "routePolicy": "Custom routing policy"
+    }
+  },
+  "applicationQuota": {
+    "restrictions": [
+      {
+        "method": "*",
+        "type": "throttle",
+        "config": {
+          "messages": "500",
+          "period": "hour",
+          "per": "1"
+        }
       }
-   },
-    "clientOrganizations": ["ALL"],
-    "applications": [{ "name": "Test"}, {"name": "Plexus Health Center" }, {"name": "Client App" }]
-  }
-  
+    ]
+  },
+  "systemQuota": {
+    "restrictions": [
+      {
+        "method": "*",
+        "type": "throttle",
+        "config": {
+          "messages": "5000",
+          "period": "hour",
+          "per": "1"
+        }
+      },
+      {
+        "method": "get-location-lat-lon-radius",
+        "type" : "throttlemb",
+        "config" : {
+          "period" : "hour",
+          "per" : "1",
+          "mb" : "300"
+        }
+      }
+    ]
+  },
+  "clientOrganizations": ["ALL"],
+  "applications": [
+    { "name": "Test" },
+    { "name": "Plexus Health Center" },
+    { "name": "Client App" }
+  ]
+}
