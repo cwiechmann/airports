@@ -58,7 +58,7 @@
       "_default":{
          "requestPolicy":"Custom request policy", 
          "responsePolicy":"Custom response policy", 
-         "routingPolicy":"Custom routing policy"
+         "routePolicy":"Custom routing policy"
       }
    },
     "clientOrganizations": ["ALL"],
