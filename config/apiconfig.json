@@ -2,7 +2,7 @@
   "name": "Airports API",
   "path": "/api/v1/airports",
   "state": "published",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "organization": "API Development",
   "summary": "Get information about airports, etc.",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
