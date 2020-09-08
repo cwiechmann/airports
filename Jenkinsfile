@@ -34,6 +34,11 @@ pipeline {
             }
          }
       }
+      stage('Deploy Airports API') {
+         steps {
+            sh "mvn clean exec:java"
+         }
+      }
       stage('Deploy Image') {
          steps{
             script {
@@ -41,11 +46,6 @@ pipeline {
                   dockerImage.push()
                }
             }
-         }
-      }
-      stage('Deploy Airports API') {
-         steps {
-            sh "mvn clean exec:java"
          }
       }
    }
