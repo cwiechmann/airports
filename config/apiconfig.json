@@ -41,6 +41,6 @@
       }
     ],
     "clientOrganizations": ["ALL"],
-    "applications": [{ "name": "Test"}, {"name": "Plexus Health Center" }]
+    "applications": [{ "name": "Test"}, {"name": "Plexus Health Center" }, {"name": "Client App" }]
   }
   
