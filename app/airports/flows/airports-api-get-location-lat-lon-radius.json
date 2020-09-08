@@ -140,18 +140,18 @@
 					"metaDescription": "The content to send."
 				},
 				{
-					"name": "url",
-					"type": "string",
-					"value": "\"http://ITEM-AX31720:8180/\"",
-					"metaName": "URL",
-					"metaDescription": "The target URL."
-				},
-				{
 					"name": "headers",
 					"type": "object",
 					"value": "{\"Content-Type\": \"text/xml;charset=UTF-8\"}",
 					"metaName": "Headers",
 					"metaDescription": "The HTTP headers to set."
+				},
+				{
+					"name": "url",
+					"type": "jsonpath",
+					"value": "$.env.SERVICE_URL",
+					"metaName": "URL",
+					"metaDescription": "The target URL."
 				}
 			],
 			"outputs": {
