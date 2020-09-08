@@ -1,7 +1,7 @@
 {
     "name": "Airports API Hello",
     "path": "/api/v1/airports",
-    "state": "unpublished",
+    "state": "published",
     "version": "1.0.0",
     "organization": "API Development",
     "summary": "Get information about airports, etc.",
