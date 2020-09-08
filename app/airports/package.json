@@ -25,7 +25,8 @@
 		"@axway/api-builder-plugin-fn-mustache": "^1.0.1",
 		"@axway/api-builder-plugin-fn-restclient": "^2.0.0",
 		"@axway/api-builder-plugin-fn-swagger": "^2.0.0",
-		"@axway/api-builder-runtime": "^4.32.0"
+		"@axway/api-builder-runtime": "^4.32.0",
+		"dotenv": "^8.2.0"
 	},
 	"devDependencies": {
 		"@axway/api-builder-admin": "^1.21.0",

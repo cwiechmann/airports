@@ -1,5 +1,8 @@
 const { expect } = require('chai');
 const { startApiBuilder, stopApiBuilder, requestAsync } = require('./_base');
+const envLoader = require('dotenv');
+const path = require('path');
+const fs = require('fs');
 
 describe('Endpoints', function () {
 	this.timeout(30000);
@@ -9,6 +12,10 @@ describe('Endpoints', function () {
 	 * Start API Builder.
 	 */
 	before(() => {
+		const envFilePath = path.join(__dirname, '.test-env');
+		if (fs.existsSync(envFilePath)) {
+			envLoader.config({ path: envFilePath });
+		}
 		server = startApiBuilder();
 		return server.started;
 	});
