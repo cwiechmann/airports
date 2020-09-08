@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "airports-api",
+    "title": "Airports API",
     "version": "1.0",
     "description": "Sample API around airport services"
   },
