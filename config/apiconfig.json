@@ -18,6 +18,29 @@
         },
         "type": "http_basic"
       }
-    ]
+    ], 
+    "tags": {
+      "Category": ["Axway", "Airports"]
+    },
+    "securityProfiles": [
+      {
+        "name": "_default",
+        "isDefault": true,
+        "devices": [
+          {
+            "name": "API Key",
+            "type": "apiKey",
+            "order": 0,
+            "properties": {
+              "apiKeyFieldName": "KeyId",
+              "takeFrom": "HEADER",
+              "removeCredentialsOnSuccess": "false"
+            }
+          }
+        ]
+      }
+    ],
+    "clientOrganizations": ["ALL"],
+    "applications": [{ "name": "Test"}, {"name": "Plexus Health Center" }]
   }
   
