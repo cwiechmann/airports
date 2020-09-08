@@ -35,6 +35,6 @@
 	},
 	"scripts": {
 		"start": "node .",
-		"test": "mocha --colors ./test --recursive -R spec"
+		"test": "mocha --colors ./test --recursive -R spec --exit"
 	}
 }
