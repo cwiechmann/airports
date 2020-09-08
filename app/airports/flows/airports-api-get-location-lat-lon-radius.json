@@ -57,7 +57,7 @@
 				"next": {
 					"context": "$.soapMessage",
 					"routes": [
-						"rest.1"
+						"rest.2"
 					],
 					"metaName": "Next"
 				},
@@ -68,64 +68,6 @@
 				}
 			},
 			"metaMethod": "Format string"
-		},
-		"rest.1": {
-			"type": "nodehandler://@axway/api-builder-plugin-fn-restclient/rest",
-			"name": "Set SOAP-Request",
-			"method": "post",
-			"parameters": [
-				{
-					"name": "url",
-					"type": "string",
-					"value": "\"http://ITEM-AX31720:8180/\"",
-					"metaName": "URL",
-					"metaDescription": "The target URL."
-				},
-				{
-					"name": "body",
-					"type": "jsonpath",
-					"value": "$.soapMessage",
-					"metaName": "Body",
-					"metaDescription": "The content to send."
-				},
-				{
-					"name": "headers",
-					"type": "object",
-					"value": "{\"Content-Type\": \"text/xml;charset=UTF-8\"}",
-					"metaName": "Headers",
-					"metaDescription": "The HTTP headers to set."
-				}
-			],
-			"outputs": {
-				"2xx": {
-					"routes": [
-						"rest.2"
-					],
-					"context": "$.response",
-					"metaName": "2XX"
-				},
-				"3xx": {
-					"routes": [],
-					"context": "$.response",
-					"metaName": "3XX"
-				},
-				"4xx": {
-					"routes": [],
-					"context": "$.response",
-					"metaName": "4XX"
-				},
-				"5xx": {
-					"routes": [],
-					"context": "$.response",
-					"metaName": "5XX"
-				},
-				"error": {
-					"routes": [],
-					"context": "$.error",
-					"metaName": "Error"
-				}
-			},
-			"metaMethod": "POST"
 		},
 		"rest.2": {
 			"type": "nodehandler://@axway/api-builder-plugin-fn-restclient/rest",
