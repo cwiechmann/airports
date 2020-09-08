@@ -1,5 +1,5 @@
 {
-    "name": "Airports API Hello",
+    "name": "Airports API",
     "path": "/api/v1/airports",
     "state": "published",
     "version": "1.0.0",
