@@ -116,8 +116,15 @@
           }
         },
         "operationId": "get-iata-code",
-        "description": "Get airports with given IATA code",
-        "x-flow": "airports-api-get-iata-code"
+        "description": "Get airports with given IATA code"
+      }
+    },
+    "/test": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-test"
       }
     }
   },
