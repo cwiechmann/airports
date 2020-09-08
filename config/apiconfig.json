@@ -40,7 +40,7 @@
           "implicitGrantEnabled" : "true",
           "implicitGrantLoginEndpointUrl" : "https://localhost:8089/api/oauth/authorize",
           "implicitGrantLoginTokenName" : "access_token",
-          "authCodeGrantTypeEnabled" : "false",
+          "authCodeGrantTypeEnabled" : "true",
           "authCodeGrantTypeRequestEndpointUrl" : "https://localhost:8089/api/oauth/authorize",
           "authCodeGrantTypeRequestClientIdName" : "client_id",
           "authCodeGrantTypeRequestSecretName" : "client_secret",
