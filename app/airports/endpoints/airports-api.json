@@ -53,6 +53,32 @@
         },
         "description": "Get a list of airports at a certain location"
       }
+    },
+    "/{code}": {
+      "parameters": [
+        {
+          "type": "string",
+          "name": "code",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "operationId": "get-code",
+        "description": "Retrieve an airport based on the give IATA-Code",
+        "x-flow": "airports-api-get-code"
+      }
     }
   },
   "definitions": {},
