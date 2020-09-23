@@ -3,6 +3,7 @@ const { startApiBuilder, stopApiBuilder, requestAsync } = require('./_base');
 const envLoader = require('dotenv');
 const path = require('path');
 const fs = require('fs');
+const nock = require('nock');
 
 describe('Endpoints', function () {
 	this.timeout(30000);
@@ -26,7 +27,8 @@ describe('Endpoints', function () {
 	after(() => stopApiBuilder(server));
 
 	describe('Airports API', () => {
-		it('[Airports Endpoint-0001] validate airports response', () => {
+		it.skip('[Airports Endpoint-0001] validate airports response', () => {
+			nock('http://mocked-soap-service::8180').post('/').replyWithFile(200, './test/testDocuments/airportsSOAPResponse.xml');
 			var jsonResponse = JSON.parse(require('fs').readFileSync('./test/testDocuments/airports.json', 'utf8'));
 			const auth = {
 				user: server.apibuilder.config.apikey || 'test',

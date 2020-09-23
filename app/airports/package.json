@@ -31,7 +31,8 @@
 	"devDependencies": {
 		"@axway/api-builder-admin": "^1.21.0",
 		"chai": "^4.1.2",
-		"mocha": "^6.1.4"
+		"mocha": "^6.1.4",
+		"nock": "^13.0.4"
 	},
 	"scripts": {
 		"start": "node .",
