@@ -40,10 +40,6 @@
     },
     "type" : "http_basic"
   } ],
-  "customProperties" : {
-    "customProperty2" : "2",
-    "customProperty3" : "false"
-  },
   "applicationQuota" : {
     "restrictions" : [ {
       "method" : "*",
