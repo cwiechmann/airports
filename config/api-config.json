@@ -1,7 +1,7 @@
 {
   "name" : "Airports API",
   "path" : "/api/v1/airports",
-  "state" : "unpublished",
+  "state" : "published",
   "version" : "1.0.0",
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
@@ -51,7 +51,7 @@
       }
     } ]
   },
-  "clientOrganizations" : [ "API Development" ],
+  "clientOrganizations" : [ "ALL" ],
   "applications" : [ {
     "name" : "Test",
     "enabled" : true,
