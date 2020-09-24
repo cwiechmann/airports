@@ -1,13 +1,22 @@
 {
-  "name": "Airports API",
-  "path": "/api/v1/airports",
-  "state": "unpublished",
-  "version": "1.0.0",
-  "organization": "API Development",
-  "summary": "Get information about airports, etc.",
+  "name" : "Airports API",
+  "path" : "/api/v1/airports",
+  "state" : "published",
+  "version" : "1.0.0",
+  "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
-  "image": "airports-image.png",
-  "backendBasepath": "http://192.168.65.1:8080/api/airports",
+  "summary" : "Get information about airports, etc.",
+  "backendBasepath" : "http://192.168.65.1:8080",
+  "image" : "airports-image.png",
+  "outboundProfiles" : {
+    "_default" : {
+      "routeType" : "policy",
+      "requestPolicy" : "Custom request policy",
+      "responsePolicy" : "Custom response policy",
+      "routePolicy" : "Custom routing policy",
+      "authenticationProfile" : "_default"
+    }
+  },
   "securityProfiles" : [ {
     "name" : "_default",
     "isDefault" : true,
@@ -22,15 +31,31 @@
       }
     } ]
   } ],
-  "authenticationProfiles": [
-    {
-      "name": "_default",
-      "isDefault": true,
-      "parameters": {
-        "username": "jeT+Zv5g8gGGNXuYUtagTyvfFLYZ0kzG",
-        "password": ""
-      },
-      "type": "http_basic"
-    }
-  ]
+  "authenticationProfiles" : [ {
+    "name" : "_default",
+    "isDefault" : true,
+    "parameters" : {
+      "username" : "jeT+Zv5g8gGGNXuYUtagTyvfFLYZ0kzG",
+      "_id_" : 0
+    },
+    "type" : "http_basic"
+  } ],
+  "applicationQuota" : {
+    "restrictions" : [ {
+      "method" : "*",
+      "type" : "throttle",
+      "config" : {
+        "messages" : "6000",
+        "period" : "hour",
+        "per" : "1"
+      }
+    } ]
+  },
+  "clientOrganizations" : [ "ALL" ],
+  "applications" : [ {
+    "name" : "Test",
+    "enabled" : true,
+    "state" : "approved",
+    "oauthResources" : [ ]
+  } ]
 }
