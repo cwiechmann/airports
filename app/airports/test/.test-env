@@ -1,4 +1,4 @@
-PORT=8080
+PORT=8081
 LOG_LEVEL=debug
 
 SERVICE_URL=http://mocked-soap-service:8180/
