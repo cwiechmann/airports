@@ -79,17 +79,6 @@
         "description": "Retrieve an airport based on the give IATA-Code",
         "x-flow": "airports-api-get-code"
       }
-    },
-    "/test": {
-      "post": {
-        "summary": "Test-Operation",
-        "operationId": "post-test",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
     }
   },
   "definitions": {},
