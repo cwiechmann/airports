@@ -13,39 +13,9 @@ pipeline {
   }
 
    stages {
-      stage('Build Airports Application') {
-         steps {
-            dir('app/airports') {
-               sh '''
-                  pwd
-                  npm ci
-                  npm run build --if-present
-                  npm test
-               '''
-            }
-         }
-      }
-      stage('Building image') {
-         steps{
-            dir('app/airports') {
-               script {
-                  dockerImage = docker.build registry + ":latest"
-               }
-            }
-         }
-      }
       stage('Deploy Airports API') {
          steps {
             sh "mvn clean exec:java"
-         }
-      }
-      stage('Deploy Image') {
-         steps{
-            script {
-               docker.withRegistry( '', registryCredential ) {
-                  dockerImage.push()
-               }
-            }
          }
       }
    }
