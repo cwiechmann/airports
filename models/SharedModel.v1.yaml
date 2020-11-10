@@ -1,0 +1,6 @@
+title: SharedModel
+type: object
+properties:
+  id:
+    type: string
+description: This model is shared between APIs
