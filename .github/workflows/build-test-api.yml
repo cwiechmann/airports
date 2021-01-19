@@ -13,8 +13,8 @@ jobs:
         with:
           java-version: 1.8
       - name: Deploy API
-        run: mvn clean exec:java
-        with:
+        env:
           APIM_USER: ${{ secrets.APIM_USER }}
           APIM_PASS: ${{ secrets.APIM_PASS }}
           APIM_HOST: ${{ secrets.APIM_HOST }}
+        run: mvn clean exec:java
