@@ -13,4 +13,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Deploy API
-        run: clean exec:java
+        run: mvn clean exec:java
