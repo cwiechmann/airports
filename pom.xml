@@ -51,7 +51,7 @@
                     <mainClass>com.axway.apim.APIImportApp</mainClass>
                     <classpath/>
                     <commandlineArgs>
-                        -c ${apiConfigFile} -h apim-host -p ${dkadklas} -force
+                        -c ${apiConfigFile} -h ${env.APIM_HOST} -u ${env.APIM_USER} -p ${env.APIM_PASS} -force
                     </commandlineArgs>
                 </configuration>
             </plugin>
