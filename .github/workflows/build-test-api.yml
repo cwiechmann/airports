@@ -17,4 +17,5 @@ jobs:
           APIM_USER: ${{ secrets.APIM_USER }}
           APIM_PASS: ${{ secrets.APIM_PASS }}
           APIM_HOST: ${{ secrets.APIM_HOST }}
+          APIM_PORT: ${{ secrets.APIM_PORT }}
         run: mvn clean exec:java
