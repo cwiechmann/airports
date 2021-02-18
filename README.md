@@ -44,3 +44,12 @@ CREATE USER IF NOT EXISTS user IDENTIFIED BY  'password'
 
 GRANT ALL ON airports.* TO 'user'@'%';
 ```
+
+# Import the sample Airports data using for instance HeidiSQL
+
+!(HeidiSQL CSV-Import)[misc/heidisql-import-airports-csv.png]
+
+# Import the API into API-Manager
+```
+apim api import -c .\config\api-config.json -s api-env
+```

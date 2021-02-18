@@ -44,9 +44,6 @@
   },
   "clientOrganizations" : [ "ALL" ],
   "applications" : [ {
-    "name" : "Test",
-    "enabled" : true,
-    "state" : "approved",
-    "oauthResources" : [ ]
+    "name" : "Airports test app"
   } ]
 }
