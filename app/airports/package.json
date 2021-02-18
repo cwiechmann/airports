@@ -17,22 +17,22 @@
 	"repository": {},
 	"private": true,
 	"dependencies": {
-		"@axway-api-builder-ext/api-builder-plugin-fn-xml-node": "^1.0.7",
+		"@axway-api-builder-ext/api-builder-plugin-fn-xml-node": "^1.0.8",
 		"@axway/api-builder-plugin-dc-mysql": "^2.2.15",
 		"@axway/api-builder-plugin-fn-base64": "^3.0.0",
 		"@axway/api-builder-plugin-fn-javascript": "^2.0.0",
-		"@axway/api-builder-plugin-fn-json": "^4.0.0",
-		"@axway/api-builder-plugin-fn-mustache": "^1.0.1",
+		"@axway/api-builder-plugin-fn-json": "^4.0.1",
+		"@axway/api-builder-plugin-fn-mustache": "^1.0.7",
 		"@axway/api-builder-plugin-fn-restclient": "^2.0.0",
-		"@axway/api-builder-plugin-fn-swagger": "^2.0.0",
-		"@axway/api-builder-runtime": "^4.32.0",
+		"@axway/api-builder-plugin-fn-swagger": "^2.9.2",
+		"@axway/api-builder-runtime": "^4.54.0",
 		"dotenv": "^8.2.0"
 	},
 	"devDependencies": {
-		"@axway/api-builder-admin": "^1.21.0",
-		"chai": "^4.1.2",
+		"@axway/api-builder-admin": "^1.37.3",
+		"chai": "^4.3.0",
 		"mocha": "^6.1.4",
-		"nock": "^13.0.4"
+		"nock": "^13.0.7"
 	},
 	"scripts": {
 		"start": "node .",

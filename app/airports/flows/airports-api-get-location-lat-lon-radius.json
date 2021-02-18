@@ -144,7 +144,7 @@
 					"type": "string",
 					"value": "\"$['soapenv:Envelope']['soapenv:Body']\"",
 					"metaName": "Select object with path",
-					"metaDescription": "The object within the returned structure with this path is returned. Example: $[\"soap:Envelope\"][\"soap:Body\"]"
+					"metaDescription": "Select the object within the returned structure using this path. Example: $[\"soap:Envelope\"][\"soap:Body\"]"
 				},
 				{
 					"name": "removeNamespaces",
