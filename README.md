@@ -47,7 +47,7 @@ GRANT ALL ON airports.* TO 'user'@'%';
 
 # Import the sample Airports data using for instance HeidiSQL
 
-!(HeidiSQL CSV-Import)[misc/heidisql-import-airports-csv.png]
+![HeidiSQL CSV-Import](misc/heidisql-import-airports-csv.png)
 
 # Import the API into API-Manager
 ```
