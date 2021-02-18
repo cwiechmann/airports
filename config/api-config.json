@@ -1,11 +1,10 @@
 {
-  "name" : "Airports API 1.2.0",
+  "name" : "Airports API Default",
   "path" : "/api/v1/airports",
   "state" : "unpublished",
   "version" : "1.2.0",
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
-  "apiRoutingKey" : "1.2.0",
   "summary" : "Get information about airports, etc.",
   "backendBasepath" : "http://192.168.65.1:8080/api/airports/",
   "image" : "airports-image.png",
@@ -45,6 +44,7 @@
   },
   "clientOrganizations" : [ "ALL" ],
   "applications" : [ {
-    "name" : "Airports test app"
+    "name" : "Airports test app",
+    "name" : "QA App"
   } ]
 }
