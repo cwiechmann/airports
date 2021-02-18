@@ -5,6 +5,7 @@
   "version" : "1.1.0",
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
+  "apiRoutingKey" : "1.2.0",
   "summary" : "Get information about airports, etc.",
   "backendBasepath" : "http://192.168.65.1:8080/api/airports/",
   "image" : "airports-image.png",
