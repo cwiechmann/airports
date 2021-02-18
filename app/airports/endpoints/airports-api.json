@@ -79,6 +79,33 @@
         "description": "Retrieve an airport based on the give IATA-Code",
         "x-flow": "airports-api-get-code"
       }
+    },
+    "/test/{pathParamA}": {
+      "get": {
+        "summary": "My test endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "operationId": "test",
+        "description": "dasdas",
+        "x-flow": "airports-api-test"
+      },
+      "parameters": [
+        {
+          "type": "string",
+          "name": "pathParamA",
+          "in": "path",
+          "required": true,
+          "description": "Test"
+        }
+      ]
     }
   },
   "definitions": {},
