@@ -51,7 +51,7 @@
             }
           }
         },
-        "description": "Get a list of airports at a certain locatio"
+        "description": "Get a list of airports at a certain location"
       }
     },
     "/{code}": {
