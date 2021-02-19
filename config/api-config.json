@@ -1,8 +1,8 @@
 {
-  "name" : "Airports API Default",
+  "name" : "Airports API",
   "path" : "/api/v1/airports",
   "state" : "unpublished",
-  "version" : "1.2.0",
+  "version" : "1.1.0",
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
   "summary" : "Get information about airports, etc.",
@@ -44,7 +44,6 @@
   },
   "clientOrganizations" : [ "ALL" ],
   "applications" : [ {
-    "name" : "Airports test app",
-    "name" : "QA App"
+    "name" : "Airports test app"
   } ]
 }
