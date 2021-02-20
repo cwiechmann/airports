@@ -121,7 +121,8 @@
           }
         },
         "operationId": "get-test-path-demo",
-        "description": "My description"
+        "description": "My description",
+        "x-flow": "airports-api-get-test-path-demo"
       }
     }
   },
