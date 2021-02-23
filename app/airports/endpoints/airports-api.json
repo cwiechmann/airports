@@ -79,6 +79,23 @@
         "description": "Retrieve an airport based on the give IATA-Code",
         "x-flow": "airports-api-get-code"
       }
+    },
+    "/endpoint/new": {
+      "get": {
+        "summary": "Mein neuer Endpunkt",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "operationId": "get-endpoint-new",
+        "description": "Neuer Demo-Endpunkt"
+      }
     }
   },
   "definitions": {},
