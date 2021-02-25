@@ -273,7 +273,9 @@ module.exports = {
 
 		// Enable support for overriding endpoint content-type using the flow's
 		// HTTP response headers.
-		enableOverrideEndpointContentType: true
+		enableOverrideEndpointContentType: true, 
+
+		enableLoggingOfLevel: true
 	},
 
 	authorization: {
