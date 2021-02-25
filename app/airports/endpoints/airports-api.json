@@ -70,8 +70,103 @@
           "200": {
             "description": "OK",
             "schema": {
-              "type": "object",
-              "properties": {}
+              "type": "array",
+              "description": "",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "ident",
+                  "type",
+                  "name",
+                  "latitude_deg",
+                  "longitude_deg",
+                  "elevation_ft",
+                  "continent",
+                  "iso_country",
+                  "iso_region",
+                  "municipality",
+                  "scheduled_service",
+                  "gps_code",
+                  "iata_code",
+                  "local_code",
+                  "home_link",
+                  "wikipedia_link",
+                  "keywords"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "ident": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "latitude_deg": {
+                    "type": "number"
+                  },
+                  "longitude_deg": {
+                    "type": "number"
+                  },
+                  "elevation_ft": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "continent": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "iso_country": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "iso_region": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "municipality": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scheduled_service": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "gps_code": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "iata_code": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "local_code": {
+                    "type": "string"
+                  },
+                  "home_link": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "wikipedia_link": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "keywords": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
             }
           }
         },
