@@ -3,7 +3,7 @@ name: Test Deploy API
 on: [push]
 
 jobs:
-  build:
+  API-Deployment:
     runs-on: ubuntu-latest
 
     steps:
