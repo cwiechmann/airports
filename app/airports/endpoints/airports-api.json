@@ -64,7 +64,7 @@
         }
       ],
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Get Airport for IATA Code",
         "tags": [],
         "operationId": "get-code",
         "description": "Retrieve an airport based on the give IATA-Code",
@@ -73,11 +73,146 @@
           "200": {
             "description": "OK",
             "schema": {
+              "type": "array",
+              "description": "",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "ident",
+                  "type",
+                  "name",
+                  "latitude_deg",
+                  "longitude_deg",
+                  "elevation_ft",
+                  "continent",
+                  "iso_country",
+                  "iso_region",
+                  "municipality",
+                  "scheduled_service",
+                  "gps_code",
+                  "iata_code",
+                  "local_code",
+                  "home_link",
+                  "wikipedia_link",
+                  "keywords"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "number"
+                  },
+                  "ident": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "latitude_deg": {
+                    "type": "number"
+                  },
+                  "longitude_deg": {
+                    "type": "number"
+                  },
+                  "elevation_ft": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "continent": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "iso_country": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "iso_region": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "municipality": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scheduled_service": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "gps_code": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "iata_code": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "local_code": {
+                    "type": "string"
+                  },
+                  "home_link": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "wikipedia_link": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "keywords": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            },
+            "examples": {
+              "example-1": [
+                {
+                  "id": 0,
+                  "ident": "string",
+                  "type": "string",
+                  "name": "Frankfurt",
+                  "latitude_deg": 0,
+                  "longitude_deg": 0,
+                  "elevation_ft": "string",
+                  "continent": "string",
+                  "iso_country": "string",
+                  "iso_region": "string",
+                  "municipality": "string",
+                  "scheduled_service": "string",
+                  "gps_code": "string",
+                  "iata_code": "string",
+                  "local_code": "string",
+                  "home_link": "string",
+                  "wikipedia_link": "string",
+                  "keywords": "string"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "/new/endpoint": {
+      "get": {
+        "summary": "Neuer Endpunkt",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
               "type": "object",
               "properties": {}
             }
           }
-        }
+        },
+        "operationId": "get-new-endpoint"
       }
     }
   },
