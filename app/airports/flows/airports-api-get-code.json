@@ -62,7 +62,9 @@
 				},
 				"error": {
 					"context": "$.error",
-					"routes": [],
+					"routes": [
+						"http.2"
+					],
 					"metaName": "Error"
 				}
 			},
@@ -110,6 +112,28 @@
 					"value": "$.airport",
 					"metaName": "Body",
 					"metaDescription": "The response payload"
+				}
+			],
+			"outputs": {
+				"next": {
+					"context": "$.response",
+					"routes": [],
+					"metaName": "Next"
+				}
+			},
+			"metaMethod": "Set HTTP Response"
+		},
+		"http.2": {
+			"type": "nodehandler://axway-flow/http",
+			"name": "Error response",
+			"method": "setresponse",
+			"parameters": [
+				{
+					"name": "status",
+					"type": "number",
+					"value": "500",
+					"metaName": "Status",
+					"metaDescription": "The HTTP status code"
 				}
 			],
 			"outputs": {

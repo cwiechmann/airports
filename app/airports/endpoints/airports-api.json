@@ -212,7 +212,8 @@
             }
           }
         },
-        "operationId": "get-new-endpoint"
+        "operationId": "get-new-endpoint",
+        "x-flow": "airports-api-get-new-endpoint"
       }
     }
   },
