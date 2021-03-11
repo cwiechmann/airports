@@ -215,24 +215,6 @@
         "operationId": "get-new-endpoint",
         "x-flow": "airports-api-get-new-endpoint"
       }
-    },
-    "/my/new/path/{paramA}": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {}
-            }
-          }
-        },
-        "operationId": "get-my-new-path",
-        "description": "Hello world"
-      },
-      "parameters": []
     }
   },
   "definitions": {},
