@@ -232,22 +232,6 @@
         "operationId": "get-brand-new-path",
         "x-flow": "airports-api-get-brand-new-path"
       }
-    },
-    "/test": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {}
-            }
-          }
-        },
-        "operationId": "get-test"
-      }
     }
   },
   "definitions": {},
