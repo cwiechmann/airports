@@ -40,7 +40,7 @@
       ],
       "get": {
         "x-flow": "airports-api-get-location-lat-lon-radius",
-        "summary": "",
+        "summary": "Get close by airports",
         "operationId": "get-location-lat-lon-radius",
         "responses": {
           "200": {
