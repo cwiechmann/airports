@@ -6,7 +6,7 @@
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
   "summary" : "Get information about airports, etc.",
-  "backendBasepath" : "http://192.168.65.1:8080/api",
+  "backendBasepath" : "https://7b6928e7ecc8.ngrok.io/api",
   "image" : "airports-image.png",
   "securityProfiles" : [ {
     "name" : "_default",
