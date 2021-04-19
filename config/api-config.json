@@ -7,7 +7,7 @@
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
   "summary" : "Get information about airports, etc.",
   "backendBasepath" : "https://7b6928e7ecc8.ngrok.io/api",
-  "image" : "yellow-airports-image.png",
+  "image" : "yellow-airports-image.jpg",
   "securityProfiles" : [ {
     "name" : "_default",
     "isDefault" : true,
