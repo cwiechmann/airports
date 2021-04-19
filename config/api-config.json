@@ -1,12 +1,12 @@
 {
   "name" : "Airports API V9",
   "path" : "/api/v1/airports",
-  "state" : "unpublished",
+  "state" : "published",
   "version" : "1.3.0",
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
   "summary" : "Get information about airports, etc.",
-  "backendBasepath" : "https://7b6928e7ecc8.ngrok.io/api",
+  "backendBasepath" : "http://192.168.65.1:8080/api",
   "image" : "airports-image.png",
   "securityProfiles" : [ {
     "name" : "_default",
@@ -21,6 +21,23 @@
         "removeCredentialsOnSuccess" : "true"
       }
     } ]
+  } ],
+  "customProperties" : {
+    "securityLevel" : "public",
+    "publicAPI" : "true"
+  },
+  "caCerts" : [ {
+    "certFile" : "certificates/ngrok.io.crt",
+    "inbound" : "false",
+    "outbound" : "true"
+  }, {
+    "certFile" : "certificates/R3.crt",
+    "inbound" : "false",
+    "outbound" : "true"
+  }, {
+    "certFile" : "certificates/DSTRootCAX3.crt",
+    "inbound" : "false",
+    "outbound" : "true"
   } ],
   "authenticationProfiles" : [ {
     "name" : "_default",
