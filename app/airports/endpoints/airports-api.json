@@ -277,6 +277,13 @@
               "properties": {}
             }
           },
+          "405": {
+            "description": "Method Not Allowed",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
           "500": {
             "description": "Internal Server Error",
             "schema": {
@@ -286,7 +293,7 @@
           }
         },
         "operationId": "get-another-path",
-        "description": "A description"
+        "description": "A method description"
       }
     }
   },
