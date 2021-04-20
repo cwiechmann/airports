@@ -49,6 +49,13 @@
               "example-1": {},
               "example-2": {}
             }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
           }
         },
         "description": "Get a list of airports at a certain location"
@@ -194,6 +201,13 @@
                   "keywords": "string"
                 }
               ]
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "object",
+              "properties": {}
             }
           }
         }

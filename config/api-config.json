@@ -6,25 +6,38 @@
   "organization" : "API Development",
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
   "summary" : "Get information about airports, etc.",
-  "backendBasepath" : "https://7b6928e7ecc8.ngrok.io/api",
-  "image" : "yellow-airports-image.jpg",
+  "backendBasepath" : "https://7b6928e7ecc8.ngrok.io/api/airports",
+  "image" : "airports-image.png",
   "securityProfiles" : [ {
     "name" : "_default",
     "isDefault" : true,
     "devices" : [ {
-      "name" : "API Key",
-      "type" : "apiKey",
+      "name" : "OAuth",
+      "type" : "oauth",
       "order" : 1,
       "properties" : {
-        "apiKeyFieldName" : "KeyId",
-        "takeFrom" : "HEADER",
-        "removeCredentialsOnSuccess" : "true"
+        "tokenStore" : "OAuth Access Token Store",
+        "accessTokenLocation" : "HEADER",
+        "authorizationHeaderPrefix" : "Bearer",
+        "accessTokenLocationQueryString" : "",
+        "scopesMustMatch" : "All",
+        "scopes" : "resource.WRITE, resource.READ",
+        "removeCredentialsOnSuccess" : "true",
+        "implicitGrantEnabled" : "true",
+        "implicitGrantLoginEndpointUrl" : "https://oauth.axway-amplify-central.com/api/oauth/authorize",
+        "implicitGrantLoginTokenName" : "access_token",
+        "authCodeGrantTypeEnabled" : "true",
+        "authCodeGrantTypeRequestEndpointUrl" : "https://oauth.axway-amplify-central.com/api/oauth/authorize",
+        "authCodeGrantTypeRequestClientIdName" : "client_id",
+        "authCodeGrantTypeRequestSecretName" : "client_secret",
+        "authCodeGrantTypeTokenEndpointUrl" : "https://oauth.axway-amplify-central.com/api/oauth/token",
+        "authCodeGrantTypeTokenEndpointTokenName" : "access_code"
       }
     } ]
   } ],
   "customProperties" : {
     "securityLevel" : "public",
-    "publicAPI" : "true",
+    "publicAPI" : "false",
     "project": "Any sample project"
   },
   "caCerts" : [ {
@@ -62,6 +75,9 @@
   },
   "clientOrganizations" : [ "ALL" ],
   "applications" : [ {
-    "name" : "Airports test app"
+    "name" : "Airports test app private"
+  },
+  {
+    "name" : "Airports test app public"
   } ]
 }
