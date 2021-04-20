@@ -27,7 +27,7 @@ jobs:
           APIM_PORT: ${{ secrets.APIM_PORT }}
         run: mvn clean exec:java
       - name: Install newman
-        run: npm -g install newman
+        run: sudo npm -g install newman
       - name: Run API tests
         run: |
           newman run ./tests/AirportsAPI.postman_collection.json -e ./tests/RBI_Demo_Env.postman_environment.json --reporter-json-export output.json --insecure
