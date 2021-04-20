@@ -212,6 +212,45 @@
           }
         }
       }
+    },
+    "/new/path": {
+      "get": {
+        "summary": "New path",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "operationId": "new-method",
+        "description": "New endpoint for the Apirports API",
+        "x-flow": "airports-api-new-method"
+      }
     }
   },
   "definitions": {},
