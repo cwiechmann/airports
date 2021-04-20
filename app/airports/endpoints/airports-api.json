@@ -215,7 +215,7 @@
     },
     "/new/path": {
       "get": {
-        "summary": "New path",
+        "summary": "My new path",
         "tags": [],
         "responses": {
           "200": {
@@ -248,8 +248,7 @@
           }
         },
         "operationId": "new-method",
-        "description": "New endpoint for the Apirports API",
-        "x-flow": "airports-api-new-method"
+        "description": "New endpoint for the Apirports API"
       }
     }
   },
