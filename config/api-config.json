@@ -35,6 +35,14 @@
       }
     } ]
   } ],
+  "outboundProfiles" : {
+    "_default" : {
+      "routeType" : "policy",
+      "requestPolicy" : "Request Policy 2",
+      "responsePolicy" : "Response Policy 1",
+      "authenticationProfile" : "_default"
+    }
+  },
   "customProperties" : {
     "securityLevel" : "public",
     "publicAPI" : "false",
