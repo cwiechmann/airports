@@ -234,7 +234,8 @@
           }
         },
         "operationId": "get-rbi-demo-path",
-        "description": "The RBI-Demo path"
+        "description": "The RBI-Demo path",
+        "x-flow": "airports-api-get-rbi-demo-path"
       }
     }
   },
