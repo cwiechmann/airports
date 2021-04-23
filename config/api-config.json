@@ -1,5 +1,5 @@
 {
-  "name" : "Airports API RBI",
+  "name" : "Airports API PreSales",
   "path" : "/api/v1/airports",
   "state" : "published",
   "version" : "1.3.0",
@@ -7,7 +7,7 @@
   "apiDefinition": "../app/airports/endpoints/airports-api.json",
   "summary" : "Get information about airports, etc.",
   "backendBasepath" : "https://dda28f5a647b.ngrok.io/api/airports",
-  "image" : "airports-image.png",
+  "image" : "yellow-airports-image.jpg",
   "securityProfiles" : [ {
     "name" : "_default",
     "isDefault" : true,
