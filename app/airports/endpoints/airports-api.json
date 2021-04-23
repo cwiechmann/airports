@@ -212,6 +212,37 @@
           }
         }
       }
+    },
+    "/rbi/path": {
+      "get": {
+        "summary": "A new path for RBI",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "operationId": "get-rbi-path",
+        "description": "A description for RBI"
+      }
     }
   },
   "definitions": {},
