@@ -212,31 +212,6 @@
           }
         }
       }
-    },
-    "/rbi/demo/path": {
-      "get": {
-        "summary": "RBI-Demo",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "object",
-              "properties": {}
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "schema": {
-              "type": "object",
-              "properties": {}
-            }
-          }
-        },
-        "operationId": "get-rbi-demo-path",
-        "description": "The RBI-Demo path",
-        "x-flow": "airports-api-get-rbi-demo-path"
-      }
     }
   },
   "definitions": {},
